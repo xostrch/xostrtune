@@ -10,10 +10,46 @@
 <body>
     <div class="main-container">
         <div class="header-container">
-            <div class="header-left"><i class="fa-solid fa-chevron-down icon-header"></i></div>
+            <div class="header-left"><i class="fa-solid fa-chevron-down icon-header icons-hover"onclick="restartSong()"></i></div>
             <div class="header-center">bad mood</div>
-            <div class="header-right"><i class="fa-solid fa-ellipsis icon-header"></i></div>
+            <div class="header-right"><i class="fa-solid fa-ellipsis icon-header icons-hover"onclick="restartSong()"></i></div>
         </div>
+        <div class="album-cover">
+            <img src="ep.png" class="img-album">
+        </div>
+        <div class="song-all">
+            <div class="song-info">
+                <div class="song-title">xostrTune</div>
+                <div class="song-author">A.D.A.M</div>
+            </div>
+            <div class="song-emoji">
+                <div class="song-emoji"><i class="fa-solid fa-volume-high music-icon icons-hover"></i></div>
+            </div>
+        </div>
+        <div class="progress-box">
+            <input type="range" value="0" id="progress">
+        </div>
+        <div id="music-time">
+            0:00
+        </div>
+        <div class="music-buttons">
+            <div class="music-buttons-left">
+                <i class="fa-solid fa-shuffle music-icon icons-hover" onclick="restartSong()"></i>
+            </div>      
+            <div class="music-buttons-middle">
+                <i class="fa-solid fa-backward-step music-icon icons-hover" onclick="restartSong()"></i>
+                <div id="pause-play"><i class="fa-solid fa-circle-play pause-icon icons-hover" id="ctrlIcon" onclick="playPause()"></i></div>
+                <i class="fa-solid fa-forward-step music-icon icons-hover"onclick="restartSong()"></i>
+            </div>
+            <div class="music-buttons-right">
+                <i class="fa-solid fa-repeat music-icon icons-hover" onclick="restartSong()"></i>
+            </div>      
+        </div>
+        <audio controls id="song">
+            <source src="Cold Funk.mp3" type="audio/mpeg">
+        </audio>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
